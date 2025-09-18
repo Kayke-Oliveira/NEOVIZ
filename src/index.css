@@ -1,13 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--gradient-combined);
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    background-size: 100%;
+  }
+
+  50% {
+    background-size: 105%;
+  }
+}
+
+body {
+  animation: pulse-glow 6s ease-in-out infinite;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  /* NEOVIZ Brand Colors */
+  --background: hsl(0 0% 3%);
+  --foreground: hsl(0 0% 98%);
+  --card: hsl(0 0% 6%);
+  --card-foreground: hsl(0 0% 98%);
+  --primary: hsl(45 100% 60%);
+  --primary-foreground: hsl(0 0% 3%);
+  --primary-glow: hsl(45 100% 70%);
+  --secondary: hsl(0 0% 12%);
+  --secondary-foreground: hsl(0 0% 98%);
+  --muted: hsl(0 0% 15%);
+  --muted-foreground: hsl(0 0% 65%);
+  --accent: hsl(45 100% 60%);
+  --accent-foreground: hsl(0 0% 3%);
+  --border: hsl(0 0% 20%);
+  --input: hsl(0 0% 12%);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(0 0% 98%);
+
+  /* Gradients */
+  --gradient-combined: radial-gradient( at 20% 15%,
+      hsla(47, 100%, 50%, 0.15) 0%,
+      hsla(47, 100%, 50%, 0.08) 15%,
+      hsla(47, 100%, 40%, 0.03) 30%,
+      hsla(0, 0%, 3%, 0.9) 50%,
+      hsl(0, 0%, 3%) 100%),
+
+    radial-gradient( at 80% 85%,
+      hsla(45, 100%, 60%, 0.3) 0%,
+      hsla(45, 100%, 60%, 0.3) 15%,
+      hsla(0, 0%, 6%, 0.7) 35%,
+      hsl(0, 0%, 3%) 60%,
+      hsl(0, 0%, 3%) 100%);
+  /* Shadows */
+  --shadow-gold: 0 10px 40px -10px hsla(45, 100%, 60%, 0.3);
+  --shadow-dark: 0 25px 50px -12px hsla(0, 0%, 0%, 0.8);
+  --glow-gold: 0 0 30px hsla(45, 100%, 70%, 0.5);
+
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Spacing */
+  --radius: 0.75rem;
 }

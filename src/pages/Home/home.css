@@ -1,3 +1,201 @@
-body{
+body {
     width: 100%;
+}
+
+:root {
+    /* NEOVIZ Brand Colors */
+    --background: hsl(0 0% 3%);
+    --foreground: hsl(0 0% 98%);
+    --card: hsl(0 0% 6%);
+    --card-foreground: hsl(0 0% 98%);
+    --primary: hsl(45 100% 60%);
+    --primary-foreground: hsl(0 0% 3%);
+    --primary-glow: hsl(45 100% 70%);
+    --secondary: hsl(0 0% 12%);
+    --secondary-foreground: hsl(0 0% 98%);
+    --muted: hsl(0 0% 15%);
+    --muted-foreground: hsl(0 0% 65%);
+    --accent: hsl(45 100% 60%);
+    --accent-foreground: hsl(0 0% 3%);
+    --border: hsl(0 0% 20%);
+    --input: hsl(0 0% 12%);
+    --destructive: hsl(0 84.2% 60.2%);
+    --destructive-foreground: hsl(0 0% 98%);
+
+    /* Gradients */
+    --gradient-combined: radial-gradient(at 20% 15%,
+            hsla(47, 100%, 50%, 0.15) 0%,
+            hsla(47, 100%, 50%, 0.08) 15%,
+            hsla(47, 100%, 40%, 0.03) 30%,
+            hsla(0, 0%, 3%, 0.9) 50%,
+            hsl(0, 0%, 3%) 100%),
+
+        radial-gradient(at 80% 85%,
+            hsla(45, 100%, 60%, 0.3) 0%,
+            hsla(45, 100%, 60%, 0.3) 15%,
+            hsla(0, 0%, 6%, 0.7) 35%,
+            hsl(0, 0%, 3%) 60%,
+            hsl(0, 0%, 3%) 100%);
+    /* Shadows */
+    --shadow-gold: 0 10px 40px -10px hsla(45, 100%, 60%, 0.3);
+    --shadow-dark: 0 25px 50px -12px hsla(0, 0%, 0%, 0.8);
+    --glow-gold: 0 0 30px hsla(45, 100%, 70%, 0.5);
+
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Spacing */
+    --radius: 0.75rem;
+}
+
+.container-center {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container-center h1 {
+    font-size: 50px;
+    color: #fff;
+}
+
+
+.container-center h2 {
+    font-size: 40px;
+    color: var(--primary-glow);
+}
+
+.container-center h2 span {
+    color: var(--accent);
+}
+
+.container-center p {
+    color: #dddbdb;
+}
+
+.container-center span {
+    color: var(--accent);
+}
+
+button {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: box-shadow 0.95s ease;
+}
+
+button span {
+    color: #000;
+}
+
+.button-direita {
+    background-color: transparent;
+    border: 2px solid;
+    border-color: rgba(255, 204, 51, 0.507);
+    color: var(--primary);
+    transition: 0.50s ease;
+}
+
+.button-esquerda:hover {
+    box-shadow: 0px 6px 30px var(--primary-glow);
+}
+
+.button-direita:hover {
+    background-color: var(--primary);
+    color: #000;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.resultados {
+    margin-top: 30px;
+    align-items: center;
+    justify-content: space-between;
+    color: #dddbdb;
+}
+
+.resultados p {
+    font-size: 12px;
+    text-align: center;
+}
+
+.resultados ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resultados li {
+    position: relative;
+    color: #b4b2b2;
+    font-size: 12px;
+    padding-left: 16px;
+}
+
+.resultados li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary);
+    border-radius: 50%;
+}
+
+.mouse-icon {
+    width: 30px;
+    height: 50px;
+    border: 2px solid var(--primary);
+    border-radius: 15px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 200px;
+    transform: translateX(-50%);
+    animation: bounce 1.5s infinite;
+    }
+
+.mouse-icon .scroll {
+    width: 4px;
+    height: 10px;
+    background-color: var(--primary);
+    border-radius: 2px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(10px);
+    }
 }

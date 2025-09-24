@@ -11,6 +11,27 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+:root {
+  /* NEOVIZ Brand Colors */
+  --background: hsl(0 0% 3%);
+  --foreground: hsl(0 0% 98%);
+  --card: hsl(0 0% 6%);
+  --card-foreground: hsl(0 0% 98%);
+  --primary: hsl(45 100% 60%);
+  --primary-foreground: hsl(0 0% 3%);
+  --primary-glow: hsl(45 100% 70%);
+  --secondary: hsl(0 0% 12%);
+  --secondary-foreground: hsl(0 0% 98%);
+  --muted: hsl(0 0% 15%);
+  --muted-foreground: hsl(0 0% 65%);
+  --accent: hsl(45 100% 60%);
+  --accent-foreground: hsl(0 0% 3%);
+  --border: hsl(0 0% 20%);
+  --input: hsl(0 0% 12%);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(0 0% 98%); 
+}
+
 .logo {
     text-decoration: none;
     font-size: 30px;
@@ -22,12 +43,13 @@ header {
 .botao-header {
     text-decoration: none;
     cursor: pointer;
-    background-color: #fff;
+    background-color: transparent;
     padding: 5px 14px;
-    color: #000;
+    color: #ffffff;
     border-radius: 4px;
 }
 
 .botao-header:hover {
-    background-color: #ffffffe0;
+    border-bottom: 3px solid;
+    border-bottom-color: var(--primary);
 }

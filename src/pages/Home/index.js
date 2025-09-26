@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom';
 
-import './home.css'
+import './home.css';
+
+import logo from '../../assets/logo.png';
 
 
 function Home() {
     return (
         <section id='First'>
             <div className='container-center'>
+                <img  src={ logo } className='logo' alt='logo'/>
                 <h1> Inovação Digital </h1>
                 <h2> <span> Para Pe</span>quenos Negócios  </h2> <br />
 

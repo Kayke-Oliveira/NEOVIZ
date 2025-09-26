@@ -49,10 +49,13 @@ body {
     --radius: 0.75rem;
 }
 
+
+/**Container Principal**/
+
 .container-center {
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
+    margin-top: 30px;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -81,6 +84,16 @@ body {
 .container-center span {
     color: var(--accent);
 }
+
+
+/**Logo**/
+
+.logo{
+    width: 180px;
+}
+
+
+/**Button**/
 
 button {
     margin-top: 30px;
@@ -122,6 +135,9 @@ button span {
     gap: 16px;
 }
 
+/**Resultados**/
+
+
 .resultados {
     margin-top: 30px;
     align-items: center;
@@ -162,6 +178,9 @@ button span {
     border-radius: 50%;
 }
 
+
+/**Mouse**/
+
 .mouse-icon {
     width: 30px;
     height: 50px;
@@ -169,7 +188,8 @@ button span {
     border-radius: 15px;
     position: relative;
     margin: 0 auto;
-    margin-top: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     transform: translateX(-50%);
     animation: bounce 1.5s infinite;
     }

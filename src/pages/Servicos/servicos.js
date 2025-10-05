@@ -11,9 +11,9 @@ function Servicos() {
             <div className='card-container'>
 
                 <div className='card'>
-                    <img alt='icon' />
-                    <h3> Desenvolvimento Web </h3>
-                    <p> Sites modernos, responsivos e otimizados para conversão. Desenvolvemos com as mais avançadas tecnologias para garantir performance e experiência única. </p>
+                    <span>&lt;&gt;</span>
+                    <h3> Desenvolvimento Web </h3><br/>
+                    <p> Sites modernos, responsivos e otimizados para conversão. Desenvolvemos com as mais avançadas tecnologias para garantir performance e experiência única. </p><br/>
                     <ul>
                         <li> Sites Responsivos </li>
                         <li> E-commerce </li>
@@ -26,9 +26,9 @@ function Servicos() {
                 <br />
 
                 <div className='card'>
-                    <img alt='icon' />
-                    <h3> Design & Identidade Visual </h3>
-                    <p> Criamos designs únicos que representam a essência da sua marca. Desde logotipos até interfaces completas, cada detalhe é pensado estrategicamente. </p>
+                    <span>&lt;&gt;</span>
+                    <h3> Design & Identidade Visual </h3><br/>
+                    <p> Criamos designs únicos que representam a essência da sua marca. Desde logotipos até interfaces completas, cada detalhe é pensado estrategicamente. </p><br/>
                     <ul>
                         <li> UI/UX Design </li>
                         <li> Logotipos </li>
@@ -41,10 +41,12 @@ function Servicos() {
                 <br />
 
                 <div className='card'>
-                    <img alt='icon' />
-                    <h3> Análise de Dados </h3>
+                    <span>&lt;&gt;</span>
+                    <h3> Análise de Dados </h3><br/>
                     <p> Transformamos dados em insights estratégicos para impulsionar seu negócio. Analytics, métricas e relatórios que geram resultados reais. </p>
+                    <br/>
                     <ul>
+                        <br/>
                         <li> Google Analytics </li>
                         <li> Relatórios Custom </li>
                         <li> Business Intelligence </li>

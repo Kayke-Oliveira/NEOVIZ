@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #bbb;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Texto da Esquerda */
+.content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.content h1 span {
+  color: hsl(45 100% 60%);
+  /* Amarelo */
+}
+
+.linha-horizontal {
+  width: 13%;
+  height: 3px;
+  background-color: hsl(45 100% 60%);
+  border-radius: 15%;
+}
+
+.content p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.content p strong {
+  color: hsl(45 100% 60%);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #facc15;
+  color: #000;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background-color: #eab308;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 255, 0, 0.4);
+}
+
+/* Cards da Direita */
+.cards {
+  flex: 1;
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #111;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  border: 2px solid transparent;
+  transition: border 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.card:hover {
+  border: 1px solid #facc15;
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.7);
+  transform: translateY(-4px);
+}
+
+.card i {
+  display: block;
+  font-size: 28px;
+  color: #facc15;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  color: #facc15;
+  margin: 0;
+}
+
+.card p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Visão */
+.vision {
+  grid-column: span 2;
+  background: #111;
+  border-radius: 12px;
+  padding: 25px;
+  font-size: 0.95rem;
+  color: #bbb;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.vision {
+  grid-column: span 2;
+  background: #111;
+  border-radius: 12px;
+  padding: 25px;
+  font-size: 0.95rem;
+  color: #bbb;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border: 1px solid #f1dd89;
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.2);
+}
+
+.vision strong {
+  display: block;
+  color: #bbb;
+  margin-bottom: 5px;
+}
+
+/* Seção Valores */
+.valores {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.valores h2 {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.valores h2 span {
+  color: hsl(45 100% 60%);
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.valor-item {
+  text-align: center;
+}
+
+.valor-item .dot {
+  width: 8px;
+  height: 8px;
+  background-color: hsl(45 100% 60%);
+  border-radius: 50%;
+  margin: 0 auto 15px;
+}
+
+.valor-item h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.valor-item p {
+  font-size: 0.95rem;
+  color: #bbb;
+  line-height: 1.5;
+}
+
+
+/*RESPONSIVO*/
+
+@media (max-width: 600px) {
+  .QuemSomos{
+    padding: 4px 12px;
+  }
+
+  .valores {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .valores-grid {
+    display: grid;
+    grid-template-columns: none;
+    margin: 0 auto;
+    margin-bottom: auto;
+  }
+
+  .valor-item .dot {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .valores {
+    display: flex;
+    flex-direction: column;
+  }
+}

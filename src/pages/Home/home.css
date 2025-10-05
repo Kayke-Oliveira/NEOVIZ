@@ -1,5 +1,6 @@
 body {
     width: 100%;
+    background-color: #0a0a0a;
 }
 
 :root {
@@ -63,14 +64,16 @@ body {
 }
 
 .container-center h1 {
-    font-size: 50px;
+    font-size: 2.5rem;
     color: #fff;
+    margin-bottom: 0.5rem;
 }
 
 
 .container-center h2 {
-    font-size: 40px;
+    font-size: 2.4rem;
     color: var(--primary-glow);
+    margin-bottom: 1rem;
 }
 
 .container-center h2 span {
@@ -79,6 +82,7 @@ body {
 
 .container-center p {
     color: #dddbdb;
+    font-size: 20px;
 }
 
 .container-center span {
@@ -88,7 +92,7 @@ body {
 
 /**Logo**/
 
-.logo{
+.logo {
     width: 180px;
 }
 
@@ -191,8 +195,8 @@ button span {
     margin-top: 50px;
     margin-bottom: 50px;
     transform: translateX(-50%);
-    animation: bounce 1.5s infinite;
-    }
+    animation: bounce 2s infinite;
+}
 
 .mouse-icon .scroll {
     width: 4px;
@@ -201,7 +205,7 @@ button span {
     border-radius: 2px;
     position: absolute;
     top: 10px;
-    left: 50%;
+    left: 42%;
 }
 
 @keyframes bounce {
@@ -211,11 +215,89 @@ button span {
         transform: translateY(0);
     }
 
-    30% {
-        transform: translateY(-10px);
+    40% {
+        transform: translateY(-40px);
     }
 
-    60% {
-        transform: translateY(10px);
+    40% {
+        transform: translateY(40px);
     }
+}
+
+/**RESPONSIVO**/
+
+@media (max-width: 600px) {
+    .container-center {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    button {
+        max-width: 100%;
+
+    }
+
+    .button-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .container-center {
+        display: flex;
+        flex-direction: column;
+        padding: 12px 24px;
+        margin-top: 30px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+
+
+    button {
+        width: 100%;
+        padding: 14px 4px;
+        align-items: center;
+        justify-content: center;
+        margin-top: auto;
+    }
+
+    .button-group {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @keyframes bounce {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        15% {
+            transform: translateY(-15px);
+        }
+
+        15% {
+            transform: translateY(15px);
+        }
+    }
+
 }

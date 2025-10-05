@@ -1,0 +1,68 @@
+.container-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.container-center h3 {
+    color: #bbb;
+    font-weight: bold;
+}
+
+/**Estilo Cards**/
+
+.card-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.card-comentario {
+    background: #111;
+    border-radius: 12px;
+    padding: 2rem;
+    color: #fff;
+    max-width: 320px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-items: stretch;
+}
+
+.card-comentario:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.card-comentario h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-comentario p {
+    font-size: 16px;
+    line-height: 1.6rem;
+    color: #ddd;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.card-comentario .info-perfil p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/*PERFIL*/
+
+.foto-perfil {
+    display: flex;
+    margin-top: 15px;
+
+}
+
+.info-perfil {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-left: 15px;
+}

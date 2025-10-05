@@ -14,7 +14,6 @@
     margin-top: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
     gap: 20px;
 }
 
@@ -43,17 +42,19 @@
     font-size: 0.9rem;
     color: #bbb;
     margin-bottom: 1rem;
-    line-height: 1.5;
+    line-height: 1.4rem;
+    text-align: justify;
 }
 
 .card ul {
     list-style: none;
     padding: 0;
-    margin: 0 0 1.5rem 0;
+    margin-bottom: 1.5rem;
 }
 
 .card ul li {
-    position: relative;
+    display: flex;
+    align-items: center;
     padding-left: 1.2rem;
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
@@ -62,8 +63,7 @@
 
 .card ul li::before {
     content: "•";
-    position: absolute;
-    left: 0;
+    text-align: left;
     color: #facc15;
     font-weight: bold;
 }
@@ -98,11 +98,18 @@
 /**Estilo botões**/
 
 .saber-mais {
-    background-color: transparent;
-    border: 2px solid;
-    border-color: rgba(255, 204, 51, 0.507);
-    color: var(--primary);
-    transition: 0.50s ease;
+    background: transparent;
+    border: 1px solid #facc15;
+    color: #facc15;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    margin-left: 50px;
 
 }
 
@@ -124,7 +131,86 @@
 }
 
 .button-conversar:hover {
-  background: #eab308; /* amarelo mais forte */
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(250, 200, 21, 0.4);
+    background: #eab308;
+    /* amarelo mais forte */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(250, 200, 21, 0.4);
 }
+
+/*RESPONSIVO*/
+
+@media (max-width: 600px) {
+
+
+    .card-container {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        background: #111;
+        border-radius: 16px;
+        color: #fff;
+        max-width: 100%;
+        height: 100%;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .saber-mais {
+        margin-left: 0;
+
+    }
+
+    .card ul li {
+        display: flex;
+        align-items: center;
+        padding-left: 0;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        gap: 0.5rem;
+        color: #eee;
+    }
+
+    .card ul li::before {
+        content: "•";
+        text-align: left;
+        color: #facc15;
+        font-weight: bold;
+    }
+
+    .card-horizontal {
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        width: 100%;
+        margin: 1rem auto;
+        gap: 1.5rem;
+      
+    }
+
+    .card-horizontal h3{
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .card-horizontal p{
+        text-align: left;
+    }
+
+    .button-conversar {
+        width: 100%;
+        min-width: none;
+        padding: 0.5rem 2rem;
+        margin-bottom: auto;
+        text-align: center;
+
+    }
+
+}
+
+
+@media (max-width: 1024px) {}

@@ -1,4 +1,5 @@
-import './Contato.css'
+import './Contato.css';
+import logo from '../../assets/logo.png';
 
 
 function Contato() {
@@ -12,7 +13,7 @@ function Contato() {
 
       <div className="cta-card">
         <div className="cta-logo">
-          <img src="neoviz-logo.png" alt="NEOVIZ Logo" />
+          <img src={logo} alt="NEOVIZ Logo"/>
         </div>
         <h2>Vamos Criar Algo <span>Extraordinário</span> Juntos</h2>
         <p>Nossa equipe está pronta para transformar sua visão em realidade digital. Agende uma conversa gratuita e sem compromisso.</p>

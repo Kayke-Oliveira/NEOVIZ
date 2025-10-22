@@ -1,35 +1,105 @@
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+span {
+    color: var(--primary);
+}
+
+/* ===== MENU MOBILE ===== */
+
+.menu-mobile {
+    display: none;
+    height: 100vh;
+    position: fixed;
+    z-index: 9999;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+/* Menu ativo */
+.menu-mobile.ativo {
+    width: 70%;
+    pointer-events: all;
+    /* clicável quando aberto */
+}
+
+/* Ícone de abrir menu */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    padding: 20px 5%;
+    cursor: pointer;
+    position: relative;
+    z-index: 10000;
+}
+
+/* Links do menu mobile */
+
+.menu-mobile nav ul {
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    margin-top: 50%;
+    text-decoration: none;
+}
+
+.menu-mobile nav ul li a {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 9%;
+    display: block;
+    text-decoration: none;
+}
+
+.menu-mobile nav ul li {
+
+    text-decoration: none;
+}
+
+/* Overlay do menu */
+.overlay-menu {
+    background-color: rgba(0, 0, 0, 0.26);
     width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    display: none;
+}
+
+.overlay-menu.ativo {
+    display: block;
+}
+
+
+/* ===== MENU DESKTOP ===== */
+header {
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    gap: 30%;
+    width: 100%;
+    display: flex;
     height: 60px;
     background: transparent;
-    position: relative;
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    z-index: 0;
 }
 
-:root {
-  /* NEOVIZ Brand Colors */
-  --background: hsl(0 0% 3%);
-  --foreground: hsl(0 0% 98%);
-  --card: hsl(0 0% 6%);
-  --card-foreground: hsl(0 0% 98%);
-  --primary: hsl(45 100% 60%);
-  --primary-foreground: hsl(0 0% 3%);
-  --primary-glow: hsl(45 100% 70%);
-  --secondary: hsl(0 0% 12%);
-  --secondary-foreground: hsl(0 0% 98%);
-  --muted: hsl(0 0% 15%);
-  --muted-foreground: hsl(0 0% 65%);
-  --accent: hsl(45 100% 60%);
-  --accent-foreground: hsl(0 0% 3%);
-  --border: hsl(0 0% 20%);
-  --input: hsl(0 0% 12%);
-  --destructive: hsl(0 84.2% 60.2%);
-  --destructive-foreground: hsl(0 0% 98%); 
+.menu-desktop {
+    display: flex;
+    margin-top: -29px;
+    gap: 17px;
 }
 
 .logo {
@@ -40,6 +110,7 @@ header {
     font-weight: bold;
 }
 
+
 .botao-header {
     text-decoration: none;
     cursor: pointer;
@@ -47,9 +118,47 @@ header {
     padding: 5px 14px;
     color: #ffffff;
     border-radius: 4px;
+    font-size: medium;
+    align-items: center;
+    justify-content: center;
 }
 
 .botao-header:hover {
     border-bottom: 3px solid;
     border-bottom-color: var(--primary);
+}
+
+
+
+/* ===== RESPONSIVIDADE ===== */
+@media screen and (max-width: 768px) {
+    .menu-desktop {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: flex;
+        /* só telas pequenas */
+        position: fixed;
+        top: 0;
+        width: 75%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.98);
+        padding: 2rem;
+        flex-direction: column;
+        transition: right 0.4s ease, opacity 0.4s ease;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 1000;
+    }
+
+    .menu-mobile.ativo {
+        right: 0;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .menu-icon {
+        display: block;
+    }
 }

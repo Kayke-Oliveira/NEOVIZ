@@ -1,0 +1,376 @@
+/* Variáveis CSS para os botões */
+:root {
+    /* NEOVIZ Brand Colors */
+    --background: hsl(0 0% 3%);
+    --foreground: hsl(0 0% 98%);
+    --card: hsl(0 0% 6%);
+    --card-foreground: hsl(0 0% 98%);
+    --primary: hsl(45 100% 60%);
+    --primary-foreground: hsl(0 0% 3%);
+    --primary-glow: hsl(45 100% 70%);
+    --secondary: hsl(0 0% 12%);
+    --secondary-foreground: hsl(0 0% 98%);
+    --muted: hsl(0 0% 15%);
+    --muted-foreground: hsl(0 0% 65%);
+    --accent: hsl(45 100% 60%);
+    --accent-foreground: hsl(0 0% 3%);
+    --border: hsl(0 0% 20%);
+    --input: hsl(0 0% 12%);
+    --destructive: hsl(0 84.2% 60.2%);
+    --destructive-foreground: hsl(0 0% 98%);
+
+    /* Shadows */
+    --shadow-gold: 0 10px 40px -10px hsla(45, 100%, 60%, 0.3);
+    --shadow-dark: 0 25px 50px -12px hsla(0, 0%, 0%, 0.8);
+    --glow-gold: 0 0 30px hsla(45, 100%, 70%, 0.5);
+
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Spacing */
+    --radius: 0.75rem;
+}
+
+/* Botão Base (home.css) */
+.button {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: box-shadow 0.95s ease;
+    text-decoration: none;
+}
+
+.button span {
+    color: #000;
+}
+
+/* Botão Esquerda - com glow hover */
+.button-esquerda:hover {
+    box-shadow: 0px 6px 30px var(--primary-glow);
+}
+
+/* Botão Direita - outline */
+.button-direita {
+    background-color: transparent;
+    border: 2px solid;
+    border-color: rgba(255, 204, 51, 0.507);
+    color: var(--primary);
+    transition: 0.50s ease;
+}
+
+.button-direita span {
+    color: var(--primary);
+}
+
+.button-direita:hover {
+    background-color: var(--primary);
+    color: #000;
+}
+
+.button-direita:hover span {
+    color: #000;
+}
+
+/* Grupo de botões */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Botão Saber Mais (servicos.css) */
+.saber-mais {
+    background: transparent;
+    border: 1px solid #facc15;
+    color: #facc15;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+.saber-mais:hover {
+    background-color: var(--primary);
+    color: #000;
+}
+
+/* Botão Conversar (servicos.css) */
+.button-conversar {
+    font-size: 15px;
+    background: #facc15;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #111;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button-conversar:hover {
+    background: #eab308;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(250, 200, 21, 0.4);
+}
+
+/* Botão CTA (QuemSomos.css) */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #facc15;
+    color: #000;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.4s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #eab308;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(255, 255, 0, 0.4);
+}
+
+/* Botões Portfolio (Projeto.css) */
+.btn-primary {
+    flex: 4;
+    text-align: center;
+    background: #111111;
+    color: #facc15;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 0.5px solid #facc15;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #eab308;
+    color: #000;
+}
+
+.btn-secondary {
+    text-align: center;
+    border: 1px solid #444;
+    color: #eee;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    border-color: #facc15;
+    color: #facc15;
+}
+
+/* Botões CTA Seção (Projeto.css) */
+.btn-primario {
+    background: #facc15;
+    color: #111111;
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 0 0 0.5px #facc15;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-primario:hover {
+    background: #ffdd33;
+    box-shadow: 0 0 12px rgba(250, 204, 21, 0.8), 0 0 0 0.5px #facc15;
+    transform: scale(1.03);
+}
+
+.btn-secundario {
+    background: #111111;
+    color: #facc15;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 0 0 0.5px #facc15;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-secundario:hover {
+    background: #1a1a1a;
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.6), 0 0 0 0.5px #ffffff;
+    transform: scale(1.03);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Botão CTA Contato (Contato.css) */
+.btn-cta {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background: #facc15;
+    color: #111;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-cta:hover {
+    background: #ffdd33;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(250, 204, 21, 0.8);
+}
+
+/* Estados de loading e disabled */
+.button:disabled,
+.btn:disabled,
+.btn-primary:disabled,
+.btn-secondary:disabled,
+.btn-primario:disabled,
+.btn-secundario:disabled,
+.btn-cta:disabled,
+.button-conversar:disabled,
+.saber-mais:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.button.loading,
+.btn.loading,
+.btn-primary.loading,
+.btn-secondary.loading,
+.btn-primario.loading,
+.btn-secundario.loading,
+.btn-cta.loading,
+.button-conversar.loading,
+.saber-mais.loading {
+    position: relative;
+    color: transparent;
+}
+
+.button.loading::after,
+.btn.loading::after,
+.btn-primary.loading::after,
+.btn-secondary.loading::after,
+.btn-primario.loading::after,
+.btn-secundario.loading::after,
+.btn-cta.loading::after,
+.button-conversar.loading::after,
+.saber-mais.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Responsividade */
+@media screen and (max-width: 600px) {
+    .button {
+        max-width: 100%;
+    }
+
+    .button-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .saber-mais {
+        margin-left: 0;
+    }
+
+    .button-conversar {
+        width: 100%;
+        min-width: none;
+        padding: 0.5rem 2rem;
+        margin-bottom: auto;
+        text-align: center;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primario,
+    .btn-secundario {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .button {
+        width: 100%;
+        padding: 14px 4px;
+        align-items: center;
+        justify-content: center;
+        margin-top: auto;
+    }
+
+    .button-group {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
